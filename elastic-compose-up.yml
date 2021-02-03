@@ -1,0 +1,12 @@
+- name: se_s
+  become: true
+  hosts: all
+  remote_user: eadm
+
+  tasks:
+    - name: Run container
+      become: True
+      shell:
+        cmd: "docker-compose -f docker-compose.yml up -d"
+        chdir: /home/eadm/elasticsearch/
+

@@ -1,0 +1,9 @@
+- name: se_s
+  become: true
+  hosts: all
+  remote_user: eadm
+
+  tasks:
+
+   - name: sysctl
+     command: sysctl -w vm.max_map_count=262144
