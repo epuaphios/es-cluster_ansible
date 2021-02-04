@@ -1,0 +1,11 @@
+- name: se_s
+  become: true
+  hosts: all
+  remote_user: eadm
+
+  tasks:
+
+   - name: Clean artifact path
+     file:
+       state: absent
+       path: "/data/elasticsearch/"

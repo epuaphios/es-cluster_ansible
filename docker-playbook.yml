@@ -50,9 +50,9 @@
         enabled: yes
       become: yes
 
-    - name: Add user vagrant to docker group
+    - name: Add user eadm to docker group
       user:
-        name: vagrant
+        name: eadm
         groups: docker
         append: yes
       become: yes     
